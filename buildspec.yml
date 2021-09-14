@@ -19,9 +19,6 @@ phases:
       - npm run build
 artifacts:
   files:
-    - frontend/src/index.js
-    - frontend/src/App.js
-    - frontend/package.json
-    - frontend/node_modules/**/*
-    - package.json
-    - node_modules/**/*
+    - '**/*'
+  discard-paths: no
+  base-directory: frontend/build
