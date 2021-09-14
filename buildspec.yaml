@@ -1,0 +1,27 @@
+version: 0.2
+
+phases: 
+  install:
+    commands:
+      # Install Node
+      - echo Installing Node 14...
+      - curl -sL https://deb.nodesource.com/setup_14.x | bash -
+      - apt install -y nodejs
+  pre_build:
+    commands:
+      #install dependencies
+      - echo Installing dependencies...
+      - npm install
+  build:
+    commands:
+      #build
+      - echo Building...
+      - npm run build
+artifacts:
+  files:
+    - frontend/src/index.js
+    - frontend/src/App.js
+    - frontend/package.json
+    - frontend/node_modules/**/*
+    - package.json
+    - node_modules/**/*
