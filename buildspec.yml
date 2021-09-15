@@ -17,7 +17,6 @@ phases:
       #build
       - echo Building...
       - npm run AWS-build
-      - node backend/server.js
 artifacts:
   files:
     - '**/*'

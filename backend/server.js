@@ -48,12 +48,11 @@ if (process.env.NODE_ENV === 'production') {
 app.use(notFound)
 app.use(errorHandler)
 
-const PORT = 5000
-const env = "development"
+const PORT = process.env.PORT || 5000
 
 app.listen(
   PORT,
   console.log(
-    `Server is running on ${PORT} and mode ${env}`.yellow.bold
+    `Server is running on ${PORT} and mode ${process.env.NODE_ENV}`.yellow.bold
   )
 )
