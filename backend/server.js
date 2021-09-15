@@ -49,10 +49,11 @@ app.use(notFound)
 app.use(errorHandler)
 
 const PORT = 5000
+const env = "development"
 
 app.listen(
   PORT,
   console.log(
-    `Server is running on ${PORT} and mode ${process.env.NODE_ENV}`.yellow.bold
+    `Server is running on ${PORT} and mode ${env}`.yellow.bold
   )
 )
