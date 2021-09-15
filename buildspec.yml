@@ -4,16 +4,19 @@ phases:
   install:
     commands:
       # Install Node
-      - curl -sL https://rpm.nodesource.com/setup_14.x | sudo bash -
-      - yum -y install nodejs
+      - echo Installing Node 14...
+      - curl -sL https://deb.nodesource.com/setup_14.x | bash -
+      - apt install -y nodejs
   pre_build:
     commands:
       #install dependencies
+      - echo Installing dependencies...
       - npm install
   build:
     commands:
       #build
-      - npm run AWS-build
+      - echo Building...
+      - npm run build
 artifacts:
   files:
     - '**/*'
